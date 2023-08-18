@@ -55,4 +55,9 @@ export class BoardService {
     findAll() {
         return this.boards;
     }
+
+    find(id: string) {
+        const index = this.boards.findIndex((board) => board.id ===id);
+        return this.boards[index];
+    }
 }
