@@ -14,3 +14,13 @@ content-type: application/json
     "name" : "jin",
     "contents": "first created content"
 }
+
+### 게시글 업데이트
+
+PUT http://localhost:3000/board/10
+content-type: application/json
+
+{
+    "name" : "jin",
+    "contents": "updated content"
+}
