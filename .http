@@ -28,3 +28,28 @@ content-type: application/json
 ### 게시글 삭제
 DELETE http://localhost:3000/board/2
 
+### DTO 테스트1
+POST http://localhost:3000/board
+content-type: application/json
+
+{
+    "name" : "jin"
+}
+
+### DTO 테스트2
+POST http://localhost:3000/board
+content-type: application/json
+
+{
+    "name" : "j",
+    "contents": "first created content"
+}
+
+### DTO 테스트3
+POST http://localhost:3000/board
+content-type: application/json
+
+{
+    "name" : "jinsssssssssssssssssssssssssssssssss",
+    "contents": "ssssssssssssssssssssssssssssssfirst created content"
+}
