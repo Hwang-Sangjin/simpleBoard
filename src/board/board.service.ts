@@ -80,6 +80,17 @@ export class BoardService {
       return null;
     }
 
+    remove(id: number){
+      const index = this.getBoardId(id);
+      
+      if(index > -1) {
+         const deleteBoard = this.boards[index];
+         this.boards.splice(index,1);
+         return deleteBoard;
+      }
+      return null;
+    }
+
     getBoardId(id: number){
       return this.boards.findIndex((board) => board.id ===id);
     }
