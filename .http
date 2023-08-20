@@ -33,7 +33,7 @@ POST http://localhost:3000/board
 content-type: application/json
 
 {
-    "name" : "jin"
+    "name" : "ji"
 }
 
 ### DTO 테스트2
