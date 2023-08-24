@@ -11,13 +11,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   imports: [BoardModule, ConfigModule(),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: '1221',
-      database: 'postgres',
-      entities: [__dirname + '/**/*.entity.{.ts,.js}'],
-      synchronize: false
+    host: process.env.DB_HOST,
+    port: parseInt(process.env.DB_PORT),
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    entities: ['src/**/*.entity.{.ts,.js}'],
+    migrationsTableName: 'migrations'
     })
   ],
   controllers: [AppController],
